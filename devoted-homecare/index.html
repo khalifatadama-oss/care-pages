@@ -1,113 +1,500 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Devoted Homecare · Home care in Ashford</title>
-<meta name="description" content="Devoted Homecare provides regulated home care in Ashford and Kent. Registered with the Care Quality Commission. Call 01797 360788.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<meta name="description" content="Devoted Homecare provides home care in Ashford and across Kent. Registered with the Care Quality Commission. Call 01797 360788.">
+<script>document.documentElement.className+=' js'</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
-:root{--ink:#1d2a2a;--muted:#5b6b6b;--teal:#155e63;--teal-d:#0f474b;--sand:#f6f1e8;--card:#ffffff;--line:#e4dccf;--accent:#c97b3f}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--sand);color:var(--ink);font-family:"Source Sans 3",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.55}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .4em;text-wrap:balance}
-a{color:var(--teal)}
-.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
-header{background:var(--sand);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
-.brand{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.15rem;color:var(--teal-d);text-decoration:none}
-.call{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:600;white-space:nowrap}
-.call:hover{background:var(--teal-d)}
-.hero{padding-block:64px 48px}
-.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.hero h1{font-size:clamp(2rem,4.6vw,3.4rem);color:var(--teal-d)}
-.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:56ch}
-.eyebrow{letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;font-weight:600;color:var(--accent);margin-bottom:12px}
-.hero-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
-.hero-card h3{font-size:1.1rem;margin-bottom:10px}
-.hero-card ul{margin:0;padding-left:1.1em;color:var(--muted)}
-.hero-card li{margin:6px 0}
-section{padding-block:48px}
-section.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-h2{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--teal-d)}
-.sub{color:var(--muted);max-width:60ch;margin-top:-4px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
-.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-section.alt .tile{background:var(--sand)}
-.tile h3{font-size:1.05rem}
-.tile p{margin:0;color:var(--muted)}
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
-.step{position:relative;padding:22px 22px 22px 66px;background:var(--card);border:1px solid var(--line);border-radius:14px}
-.step::before{counter-increment:s;content:counter(s);position:absolute;left:20px;top:20px;width:32px;height:32px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:600;font-family:Fraunces,Georgia,serif}
-.cqc{display:flex;gap:22px;align-items:center;flex-wrap:wrap;background:var(--teal-d);color:#fff;border-radius:18px;padding:28px;margin-top:26px}
-.cqc .badge{flex:0 0 auto;width:74px;height:74px;border-radius:50%;background:#fff;color:var(--teal-d);display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.05rem;letter-spacing:.04em}
-.cqc p{margin:4px 0 0;color:#dbe7e7;max-width:60ch}
-.cqc a{color:#fff}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
-.contact .tile p{margin-bottom:8px}
-.big{font-family:Fraunces,Georgia,serif;font-size:1.6rem;color:var(--teal-d);text-decoration:none}
-footer{padding-block:28px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-@media (max-width:720px){.hero .wrap{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.hero{padding-block:44px 32px}}
+  :root{
+    --bone:#F3EEE4;
+    --bone-2:#E9E2D5;
+    --bone-3:#DCD3C2;
+    --forest:#0E2B22;
+    --forest-2:#143A2E;
+    --moss:#27574A;
+    --apricot:#F3A868;
+    --apricot-2:#FFD3A8;
+    --apricot-deep:#A85716;
+    --ink:#12201A;
+    --ink-soft:#55635C;
+    --rule:rgba(18,32,26,.14);
+    --rule-dark:rgba(243,238,228,.16);
+    --bone-82:rgba(243,238,228,.82);
+    --bone-72:rgba(243,238,228,.72);
+    --bone-60:rgba(243,238,228,.6);
+    --bone-06:rgba(243,238,228,.06);
+    --glow-apricot:rgba(243,168,104,.3);
+    --glow-moss:rgba(39,87,74,.95);
+    --glow-warm:rgba(255,211,168,.1);
+    --orb-line:rgba(243,168,104,.45);
+    --top-bg:rgba(243,238,228,.86);
+    --display:"Fraunces","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+    --gutter:clamp(1rem,4vw,3rem);
+    --plate:clamp(.5rem,1.6vw,1.25rem);
+    --r:1.5rem;
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{background:var(--bone);color:var(--ink);font-family:var(--body);font-size:100%;-webkit-text-size-adjust:100%;overflow-x:hidden}
+  @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+  body{margin:0;background:var(--bone);line-height:1.55;font-size:1.0625rem;overflow-x:clip;font-optical-sizing:auto}
+  body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:var(--grain);background-size:180px;opacity:.06}
+  h1,h2,h3,p,ul{margin:0}
+  ul,ol{padding:0;list-style:none}
+  a{color:inherit}
+  svg{display:block}
+  .skip{position:absolute;left:1rem;top:-4rem;z-index:100;background:var(--forest);color:var(--bone);padding:.75rem 1rem;border-radius:.5rem;text-decoration:none}
+  .skip:focus{top:1rem}
+  :focus-visible{outline:2px solid var(--apricot);outline-offset:3px}
+  .wrap{max-width:82rem;margin-inline:auto;padding-inline:var(--gutter)}
+  .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+  /* ---------- type ---------- */
+  .eyebrow{font:500 .8125rem/1.25 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--apricot-deep);display:flex;align-items:flex-start;gap:.75rem;margin:0}
+  .eyebrow::before{content:"";width:1.5rem;height:1px;background:currentColor;flex:none;margin-top:.55em}
+  .on-dark .eyebrow{color:var(--apricot)}
+  .h2{font:400 clamp(2.25rem,5vw,4.25rem)/.98 var(--display);font-variation-settings:"opsz" 144;letter-spacing:-.02em;margin-top:.9rem}
+  .h3{font:400 clamp(1.5rem,2.4vw,2rem)/1.08 var(--display);letter-spacing:-.015em}
+  .lede{font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.5;color:var(--ink-soft);max-width:34rem}
+  .on-dark .lede{color:var(--bone-82)}
+  .muted{color:var(--ink-soft)}
+  .on-dark .muted{color:var(--bone-72)}
+  em{font-style:italic}
+
+  /* ---------- buttons & links ---------- */
+  .btn{--bg:var(--forest);--fg:var(--bone);--hbg:var(--apricot);--hfg:var(--ink);
+    position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:.7rem;
+    padding:1rem 1.5rem;border-radius:999px;background:var(--bg);color:var(--fg);
+    font:500 1rem/1 var(--body);text-decoration:none;overflow:hidden;white-space:nowrap;
+    transition:color .45s var(--ease)}
+  .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--hbg);transform:scaleX(0);transform-origin:right;transition:transform .55s var(--ease)}
+  .btn:hover,.btn:focus-visible{color:var(--hfg)}
+  .btn:hover::before,.btn:focus-visible::before{transform:scaleX(1);transform-origin:left}
+  .btn svg{width:1.05em;height:1.05em;flex:none;transition:transform .45s var(--ease)}
+  .btn:hover .arrow{transform:translateX(4px)}
+  .btn--apricot{--bg:var(--apricot);--fg:var(--ink);--hbg:var(--bone);--hfg:var(--ink)}
+  .btn--bone{--bg:var(--bone);--fg:var(--ink);--hbg:var(--apricot);--hfg:var(--ink)}
+  .btn--sm{padding:.75rem 1.1rem;font-size:.9375rem}
+  .ul{position:relative;text-decoration:none;padding-bottom:.15em}
+  .ul::before,.ul::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor}
+  .ul::before{opacity:.35}
+  .ul::after{background:var(--apricot);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+  .ul:hover::after,.ul:focus-visible::after{transform:scaleX(1);transform-origin:left}
+
+  /* ---------- header ---------- */
+  .top{position:sticky;top:0;z-index:50;background:var(--top-bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+  .top__in{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4.25rem}
+  .brand{display:flex;align-items:center;gap:.7rem;min-width:0;text-decoration:none;font:500 clamp(1.05rem,1.6vw,1.35rem)/1.1 var(--display);letter-spacing:-.01em}
+  .brand::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--apricot);flex:none}
+  .brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .hide-sm{display:none}
+  @media (min-width:640px){.hide-sm{display:inline}}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden;isolation:isolate;margin:.5rem var(--plate) 0;border-radius:var(--r);background:var(--forest);color:var(--bone);
+    padding:clamp(3.5rem,9vw,7.5rem) 0 clamp(2.5rem,6vw,4.5rem)}
+  .hero__glow{position:absolute;inset:-25%;z-index:-2;pointer-events:none;
+    background:
+      radial-gradient(38% 38% at 72% 28%,var(--glow-apricot),transparent 62%),
+      radial-gradient(34% 34% at 18% 82%,var(--glow-moss),transparent 62%),
+      radial-gradient(28% 28% at 55% 95%,var(--glow-warm),transparent 60%);
+    will-change:transform}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--grain);background-size:180px;opacity:.16;mix-blend-mode:soft-light;pointer-events:none}
+  .hero .eyebrow{color:var(--apricot)}
+  .h1{font:400 clamp(3rem,9vw,7.5rem)/.92 var(--display);font-variation-settings:"opsz" 144;letter-spacing:-.03em;margin-top:1.5rem;max-width:12ch}
+  .h1 .line{display:block;overflow:hidden;padding:0 .06em .12em 0;margin-bottom:-.12em}
+  .h1 .line>span{display:block}
+  .h1 em{font-style:italic;color:var(--apricot-2);font-weight:300}
+  .hero__grid{display:grid;gap:2.5rem;margin-top:clamp(2.5rem,6vw,4.5rem);align-items:end}
+  @media (min-width:900px){.hero__grid{grid-template-columns:7fr 5fr;gap:4rem}}
+  .hero__lead{font-size:clamp(1.1rem,1.6vw,1.375rem);line-height:1.45;color:var(--bone-82);max-width:30rem}
+  .hero__cta{margin-top:1.75rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+  .hero__note{font-size:.9375rem;color:var(--bone-60)}
+  .panel{background:var(--bone-06);border:1px solid var(--rule-dark);border-radius:1.25rem;padding:clamp(1.25rem,2.5vw,2rem)}
+  .panel h2{font:400 1.05rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--apricot);display:flex;justify-content:space-between;align-items:baseline}
+  .panel h2 small{font-size:.75rem;letter-spacing:.1em;color:var(--bone-60);font-variant-numeric:tabular-nums}
+  .who{margin-top:1rem}
+  .who li{display:flex;gap:.9rem;padding:.8rem 0;border-top:1px solid var(--rule-dark);font-size:1.05rem;line-height:1.35}
+  .who li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--apricot);flex:none;margin-top:.55em}
+  .who li:last-child{padding-bottom:.2rem}
+
+  /* ---------- hero entrance ---------- */
+  .js .enter{opacity:0;animation:rise 1s var(--ease) both;animation-delay:calc(var(--d,0) * 1s)}
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  .js .h1 .line>span{transform:translateY(108%);animation:lineUp 1.15s var(--ease) forwards;animation-delay:calc(var(--d,0) * 1s)}
+  @keyframes lineUp{to{transform:none}}
+  @media (prefers-reduced-motion:no-preference){
+    .hero__glow{animation:drift 34s ease-in-out infinite alternate}
+  }
+  @keyframes drift{from{transform:translate3d(-3%,-2%,0) rotate(0deg) scale(1)}to{transform:translate3d(3%,3%,0) rotate(7deg) scale(1.06)}}
+
+  /* ---------- marquee ---------- */
+  .mq{overflow:hidden;border-bottom:1px solid var(--rule);padding:1.1rem 0;margin:2.5rem var(--plate) 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+  .mq__track{display:flex;width:max-content;animation:mq 80s linear infinite}
+  .mq:hover .mq__track{animation-play-state:paused}
+  .mq__set{display:flex;flex:none}
+  .mq__item{font:italic 400 clamp(1.25rem,2.2vw,1.75rem)/1 var(--display);white-space:nowrap;padding-inline:1.4rem;display:flex;align-items:center;gap:1.4rem;padding-bottom:.1em}
+  .mq__item::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--apricot);flex:none;margin-left:1.4rem}
+  @keyframes mq{to{transform:translateX(-50%)}}
+
+  /* ---------- sections ---------- */
+  .sec{padding-block:clamp(4rem,10vw,8rem)}
+  .sec__head{display:grid;gap:1.25rem;margin-bottom:clamp(2rem,5vw,3.5rem);align-items:end}
+  @media (min-width:900px){.sec__head{grid-template-columns:7fr 5fr;gap:3rem}}
+  .sec__head .lede{margin-bottom:.35rem}
+
+  /* ---------- bento ---------- */
+  .bento{display:grid;gap:.75rem}
+  .tile{position:relative;overflow:hidden;border-radius:1.25rem;background:var(--bone-2);padding:clamp(1.5rem,3vw,2.5rem);display:flex;flex-direction:column;gap:1rem;min-height:11rem}
+  .tile .eyebrow{margin-bottom:auto}
+  .tile>*{position:relative;z-index:1}
+  .tile p{max-width:36rem}
+  .tile--forest{background:var(--forest);color:var(--bone)}
+  .tile--forest::after{content:"";position:absolute;inset:0;background-image:var(--grain);background-size:180px;opacity:.14;mix-blend-mode:soft-light;pointer-events:none}
+  .tile--forest .eyebrow{color:var(--apricot)}
+  .tile--apricot{background:var(--apricot);color:var(--ink)}
+  .tile--apricot .eyebrow{color:var(--ink)}
+  .tile--big .h3{font-size:clamp(2rem,4vw,3.5rem);line-height:1;letter-spacing:-.025em;max-width:11ch}
+  .tile--big p{font-size:clamp(1.05rem,1.4vw,1.2rem);color:var(--bone-82);max-width:26rem}
+  .orb{display:none;position:absolute;right:-15%;top:-35%;width:min(22rem,55%);aspect-ratio:1;border-radius:50%;border:1px solid var(--orb-line);pointer-events:none;z-index:0}
+  .orb::after{content:"";position:absolute;left:12%;top:62%;width:15%;aspect-ratio:1;border-radius:50%;background:var(--apricot)}
+  @media (min-width:760px){
+    .bento{grid-template-columns:repeat(12,1fr);gap:1rem}
+    .tile{min-height:15rem}
+    .orb{display:block}
+    .t-a{grid-column:1/8;grid-row:1/3;min-height:32rem}
+    .t-b{grid-column:8/13}
+    .t-c{grid-column:8/13}
+    .t-d{grid-column:1/6}
+    .t-e{grid-column:6/13}
+  }
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;gap:2.5rem}
+  @media (min-width:760px){.steps{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+  .step{position:relative;border-top:1px solid var(--rule);padding-top:clamp(5.5rem,9vw,7.5rem)}
+  .step__num{position:absolute;top:-.05em;left:-.04em;font:400 clamp(6rem,11vw,10rem)/1 var(--display);font-variation-settings:"opsz" 144;letter-spacing:-.05em;color:var(--forest);opacity:.08;pointer-events:none;user-select:none}
+  .step .h3{margin-bottom:.75rem}
+  .step p{color:var(--ink-soft)}
+
+  /* ---------- CQC plate ---------- */
+  .plate{position:relative;overflow:hidden;isolation:isolate;margin:0 var(--plate);border-radius:var(--r);background:var(--forest);color:var(--bone);padding:clamp(3rem,7vw,6rem) 0}
+  .plate::after{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--grain);background-size:180px;opacity:.14;mix-blend-mode:soft-light;pointer-events:none}
+  .plate::before{content:"";position:absolute;z-index:-2;right:-10%;top:-30%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,var(--glow-moss),transparent);pointer-events:none}
+  .cqc{display:grid;gap:2.5rem;align-items:center}
+  @media (min-width:900px){.cqc{grid-template-columns:1.2fr .8fr;gap:4rem}}
+  .cqc .h2{max-width:16ch}
+  .cqc__side{display:grid;gap:1.5rem;justify-items:start}
+  .stamp{width:clamp(8rem,14vw,11rem);color:var(--apricot);margin-bottom:.5rem}
+  @media (prefers-reduced-motion:no-preference){.stamp{animation:spin 40s linear infinite}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .stamp text{font:500 11.5px var(--body);letter-spacing:.14em;text-transform:uppercase;fill:currentColor}
+
+  /* ---------- join ---------- */
+  .join{display:grid;gap:1.5rem;border-top:1px solid var(--rule);padding-top:clamp(2rem,4vw,3rem)}
+  @media (min-width:900px){.join{grid-template-columns:7fr 5fr;gap:3rem;align-items:start}}
+  .join__body{display:grid;gap:1.5rem;justify-items:start}
+  .join__body p{max-width:30rem;color:var(--ink-soft);font-size:1.1rem}
+
+  /* ---------- contact bento ---------- */
+  .phone-big{font:400 clamp(2.25rem,6vw,4.75rem)/1 var(--display);font-variation-settings:"opsz" 144;letter-spacing:-.03em;text-decoration:none;font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1;color:inherit;display:inline-block;transition:color .4s var(--ease)}
+  .phone-big:hover{color:var(--apricot-2)}
+  .addr{font:400 1.2rem/1.45 var(--display);font-style:normal}
+  .maplink{display:inline-flex;align-items:center;gap:.6rem;font:500 1.15rem/1 var(--body);text-decoration:none}
+  .maplink svg{width:1.1em;height:1.1em;transition:transform .45s var(--ease)}
+  .maplink:hover svg{transform:translate(3px,-3px)}
+  .area{font:400 clamp(1.5rem,2.6vw,2.25rem)/1.1 var(--display);letter-spacing:-.015em;max-width:16ch}
+  @media (min-width:760px){
+    .c-a{grid-column:1/8;grid-row:1/3;min-height:26rem}
+    .c-a p{max-width:22rem}
+    .c-b{grid-column:8/13}
+    .c-c{grid-column:8/13;min-height:12rem}
+    .c-d{grid-column:1/13;min-height:12rem}
+  }
+  @media (min-width:1100px){.c-d{grid-column:1/13}}
+
+  /* ---------- footer ---------- */
+  .foot{border-top:1px solid var(--rule);padding:2rem 0 2.5rem;font-size:.9375rem;color:var(--ink-soft)}
+  .foot__in{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+  .foot a{text-decoration:none}
+
+  /* ---------- scroll reveals ---------- */
+  .js [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
+  .js [data-reveal].in{opacity:1;transform:none}
+
+  @media (prefers-reduced-motion:reduce){
+    .js .enter,.js .h1 .line>span{animation:none;opacity:1;transform:none}
+    .js [data-reveal]{opacity:1;transform:none;transition:none}
+    .mq__track{animation:none;flex-wrap:wrap;width:auto}
+    .mq__set:last-child{display:none}
+    .mq{mask-image:none;-webkit-mask-image:none}
+    .btn::before,.ul::after,.btn svg,.maplink svg{transition:none}
+    html{scroll-behavior:auto}
+  }
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="#top">Devoted Homecare</a><a class="call" href="tel:+441797360788">Call 01797 360788</a></div></header>
+<a class="skip" href="#main">Skip to content</a>
 
-<section class="hero" id="top"><div class="wrap">
-  <div>
-    <div class="eyebrow">Home care in Ashford</div>
-    <h1>Care at home, from a team that knows Ashford.</h1>
-    <p class="lead">Devoted Homecare supports people to stay safe, comfortable and independent in their own homes. Regulated by the Care Quality Commission and based locally in Kent.</p>
-    <p><a class="call" href="tel:+441797360788">Talk to us today</a></p>
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#top" aria-label="Devoted Homecare, back to top"><span>Devoted Homecare</span></a>
+    <a class="btn btn--sm" href="tel:+441797360788">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+      <span>Call <span class="hide-sm num">01797 360788</span></span>
+    </a>
   </div>
-  <div class="hero-card">
-    <h3>Who we support</h3>
-    <ul><li>Support for sensory impairments</li><li>Care for adults under 65</li><li>Dementia care</li><li>Care for older people</li><li>Support for physical disabilities</li></ul>
-  </div>
-</div></section>
+</header>
 
-<section class="alt"><div class="wrap">
-  <h2>What home care looks like with us</h2>
-  <p class="sub">Every visit is planned around the person, not the clock. Support can start with a few hours a week and grow as needs change.</p>
-  <div class="grid">
-    <div class="tile"><h3>Personal care</h3><p>Help with washing, dressing, medication reminders and getting the day started with dignity.</p></div>
-    <div class="tile"><h3>Companionship and daily living</h3><p>Meals, shopping, light housework and company. The things that keep a home running and a person connected.</p></div>
-    <div class="tile"><h3>Specialist support</h3><p>Experienced with support for sensory impairments, dementia care, support for physical disabilities. Care plans are written with the person and their family, and reviewed as things change.</p></div>
-    <div class="tile"><h3>Respite for family carers</h3><p>Planned cover so the people who care every day can rest, knowing someone reliable is there.</p></div>
+<main id="main">
+<section class="hero on-dark" id="top">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow enter" id="eyebrow" style="--d:.05">Home care in Ashford</p>
+    <h1 class="h1">
+      <span class="line"><span style="--d:.15">Still home.</span></span>
+      <span class="line"><span style="--d:.28">Still <em>you.</em></span></span>
+    </h1>
+    <div class="hero__grid">
+      <div>
+        <p class="hero__lead enter" style="--d:.5">Friendly, regulated home care in Ashford and across Kent. Help with the everyday, delivered kindly and at your pace, so life can carry on where it belongs.</p>
+        <div class="hero__cta enter" style="--d:.62">
+          <a class="btn btn--apricot" href="tel:+441797360788">
+            <span>Call <span class="num">01797 360788</span></span>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <span class="hero__note">Registered with the Care Quality Commission</span>
+        </div>
+      </div>
+      <aside class="panel enter" style="--d:.78" aria-labelledby="who-title">
+        <h2 id="who-title">Who we support <small>Ashford</small></h2>
+        <ul class="who" id="who">
+<li>Support for sensory impairments</li><li>Care for adults under 65</li><li>Dementia care</li><li>Care for older people</li><li>Support for physical disabilities</li>
+        </ul>
+      </aside>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section><div class="wrap">
-  <h2>How care starts</h2>
-  <div class="steps">
-    <div class="step"><h3>A conversation</h3><p>Call us. We listen to what's needed, who's involved and what matters most.</p></div>
-    <div class="step"><h3>A home visit</h3><p>We visit, meet the family, and put together a care plan you can read and change.</p></div>
-    <div class="step"><h3>Care begins</h3><p>Consistent carers, agreed times, and a manager you can reach when something changes.</p></div>
+<div class="mq" aria-hidden="true">
+  <div class="mq__track">
+    <div class="mq__set">
+      <span class="mq__item">Personal care</span><span class="mq__item">Companionship and daily living</span><span class="mq__item">Specialist support</span><span class="mq__item">Respite for family carers</span><span class="mq__item">Home care in Ashford</span><span class="mq__item">Registered with the Care Quality Commission</span>
+    </div>
+    <div class="mq__set">
+      <span class="mq__item">Personal care</span><span class="mq__item">Companionship and daily living</span><span class="mq__item">Specialist support</span><span class="mq__item">Respite for family carers</span><span class="mq__item">Home care in Ashford</span><span class="mq__item">Registered with the Care Quality Commission</span>
+    </div>
   </div>
-  <div class="cqc">
-    <div class="badge">CQC</div>
-    <div><h3 style="margin:0;color:#fff">Registered with the Care Quality Commission</h3>
-    <p>Devoted Homecare is a registered home care provider. Our registration and inspection history are published on the CQC website. <a href="https://www.cqc.org.uk/location/1-10336570859" rel="noopener">View our CQC page</a>.</p></div>
+</div>
+
+<section class="sec" id="care" aria-labelledby="care-title">
+  <div class="wrap">
+    <div class="sec__head">
+      <div data-reveal>
+        <p class="eyebrow">What we do</p>
+        <h2 class="h2" id="care-title">What home care looks like with us</h2>
+      </div>
+      <p class="lede" data-reveal style="--i:1">Care at home means the small, ordinary things done well: a wash, a meal, a chat, a lift to the day centre. Here is how we shape it around you.</p>
+    </div>
+    <div class="bento">
+      <article class="tile tile--forest tile--big t-a on-dark" data-reveal>
+        <p class="eyebrow"><span class="num">01</span> Personal care</p>
+        <h3 class="h3">Help with the personal things, done with dignity.</h3>
+        <p>Washing, dressing, getting up in the morning and settling at night. Meals, medication prompts, and a hand with the bits that have become harder. Always at your pace, and always with respect.</p>
+        <div class="orb" aria-hidden="true"></div>
+      </article>
+      <article class="tile t-b" data-reveal style="--i:1">
+        <p class="eyebrow"><span class="num">02</span> Companionship and daily living</p>
+        <h3 class="h3">Company, and a hand around the house.</h3>
+        <p class="muted">A chat over tea, a walk to the shops, help with cooking, laundry and keeping on top of the home. The everyday things that make a day feel like yours.</p>
+      </article>
+      <article class="tile t-c" data-reveal style="--i:2">
+        <p class="eyebrow"><span class="num">03</span> Specialist support</p>
+        <h3 class="h3">Care shaped around a condition.</h3>
+        <p class="muted">Experienced with support for sensory impairments, dementia care, support for physical disabilities. Care plans are written with the person and their family, and reviewed as things change. Every plan is written with you and reviewed as needs change.</p>
+      </article>
+      <article class="tile t-d" data-reveal style="--i:3">
+        <p class="eyebrow"><span class="num">04</span> Respite for family carers</p>
+        <h3 class="h3">A break for the people who do the caring.</h3>
+        <p class="muted">Looking after someone you love is a big job. We can step in for a few hours, a day or longer, so you can rest knowing they are in good hands.</p>
+      </article>
+      <article class="tile tile--apricot t-e" data-reveal style="--i:4">
+        <p class="eyebrow">Not sure what is needed yet?</p>
+        <h3 class="h3">That is normal. Call, and we will talk it through together.</h3>
+        <div>
+          <a class="btn" href="tel:+441797360788">
+            <span>Call <span class="num">01797 360788</span></span>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section class="alt"><div class="wrap">
-  <h2>Join the team</h2>
-  <p class="sub">We're always looking for carers in Ashford and Kent who take pride in doing this well. Experience helps, but kindness and reliability matter more. Training is provided.</p>
-  <p><a class="call" href="tel:+441797360788">Ask about carer roles</a></p>
-</div></section>
-
-<section id="contact"><div class="wrap">
-  <h2>Get in touch</h2>
-  <div class="contact">
-    <div class="tile"><p>Call us</p><a class="big" href="tel:+441797360788">01797 360788</a><p style="margin-top:10px">Monday to Friday, 9am to 5pm. Out of hours, leave a message and we'll call back.</p></div>
-    <div class="tile"><p>Find us</p><p><strong>Devoted Homecare</strong><br>7 Metford<br>Evegate Business Park<br>Station Road<br>Smeeth<br>Ashford<br>TN25 6SX</p><p><a href="https://www.google.com/maps/search/?api=1&query=Devoted+Homecare+TN25+6SX" rel="noopener">Open in Google Maps</a></p></div>
+<section class="sec" id="how" aria-labelledby="how-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec__head">
+      <div data-reveal>
+        <p class="eyebrow">How care starts</p>
+        <h2 class="h2" id="how-title">Three steps, at your speed</h2>
+      </div>
+      <p class="lede" data-reveal style="--i:1">Nothing happens until you are ready. Most families start with a phone call and a cup of tea.</p>
+    </div>
+    <ol class="steps">
+      <li class="step" data-reveal>
+        <span class="step__num num" aria-hidden="true">01</span>
+        <h3 class="h3">A conversation</h3>
+        <p>Call us, or ask us to call you. Tell us what is happening and what would help. It is fine if you do not have all the answers yet.</p>
+      </li>
+      <li class="step" data-reveal style="--i:1">
+        <span class="step__num num" aria-hidden="true">02</span>
+        <h3 class="h3">A home visit</h3>
+        <p>We come to see you at home, meet the family if you would like, and listen to what matters. Together we write a care plan around it.</p>
+      </li>
+      <li class="step" data-reveal style="--i:2">
+        <span class="step__num num" aria-hidden="true">03</span>
+        <h3 class="h3">Care begins</h3>
+        <p>You meet your carers, visits start on the days and times that suit you, and we keep checking that the plan still fits.</p>
+      </li>
+    </ol>
   </div>
-</div></section>
+</section>
 
-<footer><div class="wrap"><span>© 2026 Devoted Homecare</span><span>Registered with the Care Quality Commission · Kent</span></div></footer>
+<section class="plate on-dark" id="cqc" aria-labelledby="cqc-title">
+  <div class="wrap cqc">
+    <div data-reveal>
+      <p class="eyebrow">Regulated care</p>
+      <h2 class="h2" id="cqc-title">Devoted Homecare is registered with the Care Quality Commission.</h2>
+    </div>
+    <div class="cqc__side" data-reveal style="--i:1">
+      <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="ring" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+        <text textLength="462" lengthAdjust="spacing"><textPath href="#ring">Registered with the Care Quality Commission · Home care ·</textPath></text>
+        <circle cx="100" cy="100" r="46" fill="none" stroke="currentColor" stroke-width="1" opacity=".6"/>
+        <circle cx="100" cy="100" r="5" fill="currentColor"/>
+      </svg>
+      <p class="lede">The CQC is the independent regulator of health and social care in England. Our registration is public. Please read it, and ask us anything about it.</p>
+      <a class="btn btn--bone" href="https://www.cqc.org.uk/location/1-10336570859" target="_blank" rel="noopener">
+        <span>View our CQC page</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="join" aria-labelledby="join-title">
+  <div class="wrap join">
+    <div data-reveal>
+      <p class="eyebrow">Careers</p>
+      <h2 class="h2" id="join-title">Join the team</h2>
+    </div>
+    <div class="join__body" data-reveal style="--i:1">
+      <p>If you are kind, patient and reliable, and want work that matters in Ashford, we would like to talk. Call and ask about carer roles.</p>
+      <a class="btn" href="tel:+441797360788">
+        <span>Call about carer roles</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact" aria-labelledby="contact-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec__head">
+      <div data-reveal>
+        <p class="eyebrow">Get in touch</p>
+        <h2 class="h2" id="contact-title">The first call is just a conversation</h2>
+      </div>
+      <p class="lede" data-reveal style="--i:1">Whether it is for you, a parent or a neighbour, we are glad to hear from you.</p>
+    </div>
+    <div class="bento">
+      <div class="tile tile--forest c-a on-dark" data-reveal>
+        <p class="eyebrow">Call us</p>
+        <a class="phone-big" href="tel:+441797360788">01797 360788</a>
+        <p class="muted">Call to talk about care for yourself or someone you love.</p>
+        <div class="orb" aria-hidden="true"></div>
+      </div>
+      <div class="tile c-b" data-reveal style="--i:1">
+        <p class="eyebrow">Find us</p>
+        <address class="addr">Devoted Homecare<br>7 Metford<br>Evegate Business Park<br>Station Road<br>Smeeth<br>Ashford<br>TN25 6SX</address>
+      </div>
+      <div class="tile tile--apricot c-c" data-reveal style="--i:2">
+        <p class="eyebrow">Directions</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Devoted+Homecare+TN25+6SX" target="_blank" rel="noopener">
+          Open in Google Maps
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+      <div class="tile c-d" data-reveal style="--i:3">
+        <p class="eyebrow">Where we work</p>
+        <p class="area">Home care in Ashford and across Kent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>© 2026 Devoted Homecare</span>
+    <span>Registered with the Care Quality Commission</span>
+    <a class="ul" href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Marquee: built from the real service list so nothing is invented */
+  var who = document.getElementById('who');
+  var eyebrow = document.getElementById('eyebrow');
+  if (who) {
+    var items = [];
+    who.querySelectorAll('li').forEach(function(li){
+      var t = li.textContent.replace(/\s+/g,' ').trim();
+      if (t) items.push(t);
+    });
+    if (items.length) {
+      if (eyebrow) items.push(eyebrow.textContent.trim());
+      items.push('Registered with the Care Quality Commission');
+      var base = items.slice();
+      while (base.length < 14) base = base.concat(items);
+      document.querySelectorAll('.mq__set').forEach(function(set){
+        set.textContent = '';
+        base.forEach(function(t){
+          var s = document.createElement('span');
+          s.className = 'mq__item';
+          s.textContent = t;
+          set.appendChild(s);
+        });
+      });
+    }
+  }
+
+  /* Scroll reveals */
+  var els = document.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>/* safety net: nothing may stay hidden if a reveal script fails */
+setTimeout(function(){document.querySelectorAll('.reveal,[data-reveal],.fade-up,[data-animate],.rv,[data-rv]').forEach(function(e){e.classList.add('in','is-visible','visible','is-in');e.style.opacity='1';e.style.transform='none'});},1800);</script>
 </body>
 </html>
