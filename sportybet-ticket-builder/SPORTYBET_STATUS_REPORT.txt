@@ -1,0 +1,264 @@
+SPORTYBET TICKETS - STATUS REPORT (PROVISIONAL, NOT RESEARCH-VERIFIED)
+Generated Thu 01 Oct 08:07 WAT. Stake N500 per ticket. Nothing here has been placed or booked.
+
+=== 1. WHERE THINGS STAND, PLAINLY ===
+* I connected to SportyBet (read-only, no login, from a US data centre; your account was never touched) and pulled the full feed:
+  2,146 events, 86,573 priced outcomes, all 16 sports.
+* I decoded the site's bonus rules from its own code and checked them against the LIVE slip for your code TGXS9T:
+  site shows odds 2,019.36, bonus N1,130,841.09, potential win N2,140,520.64; my formula gives the same to the kobo.
+* The research you require (Stage A + Stage B on every leg) COULD NOT be completed. This session has a hard cap of 200 web searches
+  and it was used up. 50 of 151 legs got both stages; most of those results say 'could not verify'. Per your rule I am NOT calling
+  any ticket below checked. They are the best the MATHS can do, with research only ever lowering a probability.
+* I did not create booking codes. My attempt to create one through SportyBet's API was blocked by a safety check, and I did not
+  work around it. You (or I, with your explicit go-ahead in a fresh session) can book from your own Nigerian account.
+
+=== 2. THE KEY FINDING: A CEILING NOTHING CAN BEAT ===
+SportyBet's multiple bonus is not the table maximum. The slip computes it from each leg's odds x SportyBet's own probability, and
+chooses it so the ticket's long-run return is about 97.5% of stake (the 'targetRtp' below), as long as it is not at a table limit.
+Result: payout is almost exactly  N500 x 0.975 / (product of SportyBet's win probabilities).
+So the chance of hitting a target T can never beat about  N500 x 0.975 / T  on SportyBet's numbers:
+   T1       N2,000,000  ceiling 1 in 4,105
+   T2       N5,000,000  ceiling 1 in 10,263
+   T3      N10,000,000  ceiling 1 in 20,525
+   T4      N50,000,000  ceiling 1 in 102,627
+   T5     N200,000,000  ceiling 1 in 410,509
+Consequences: (a) my builds are already within 1-5% of that ceiling; leg choice cannot move it much. (b) More legs does NOT compound
+the margin the way your prompt assumes; the bonus compensates. (c) The only ways above the ceiling are real edge over SportyBet's
+probabilities (needs research or sharp-market comparison) and positive correlation between legs. (d) The handover's 'bonus is
+unpredictable' (0.48-0.83 of max) is this effect: it is predictable, and now modelled exactly.
+
+=== 3. PROVISIONAL TICKETS (maths-optimal, vetoes applied, unresearched legs marked) ===
+'Independent' multiplies the legs. 'SportyBet-only' is the optimistic bound. 'Correlated' assumes within-league-day correlation 0.03
+and global 0.005 - THESE TWO NUMBERS ARE MY GUESS, not measured. Sensitivity is in section 4.
+
+--- TICKET 1  target N2,000,000 ---
+legs 29 | site payout N2,003,367 | independent 1 in 4,231 | SportyBet-only 1 in 4,116 | correlated 1 in 2,858 (x1.48)
+   1. Thu 01 Oct 15:30 WAT | Ice Hockey | VHL | Izhstal Izhevsk v HC Akm Tula | Izhstal Izhevsk Over/Under total=3.5 -> Under 3.5 @1.21 (p=0.806)  [UNRESEARCHED]
+   2. Thu 01 Oct 17:30 WAT | Ice Hockey | KHL | Severstal Cherepovets v Admiral Vladivostok | Over/Under total=6.5 -> Under 6.5 @1.28 (p=0.759)  [UNRESEARCHED]
+   3. Thu 01 Oct 17:30 WAT | Ice Hockey | Extraliga | Sparta Prague v Ceske Budejovice | Winner (incl. overtime and penalties)  -> Home @1.36 (p=0.717)  [UNRESEARCHED]
+   4. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Rogle BK v Timraa IK | Rogle BK Over/Under total=1.5 -> Over 1.5 @1.20 (p=0.811)  [UNRESEARCHED]
+   5. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Djurgardens IF v Farjestads BK | Over/Under total=3.5 -> Over 3.5 @1.23 (p=0.789)  [UNRESEARCHED]
+   6. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Frolunda HC v Brynas IF | Frolunda HC Over/Under total=1.5 -> Over 1.5 @1.27 (p=0.765)  [UNRESEARCHED]
+   7. Thu 01 Oct 19:45 WAT | Basketball | Euroleague | Paris Basketball v BC Zalgiris Kaunas | Handicap (incl. overtime) 12.5 hcp=12.5 -> Home (+12.5) @1.20 (p=0.817)  [UNRESEARCHED]
+   8. Fri 02 Oct 03:00 WAT | Ice Hockey | NHL | San Jose Sharks v Florida Panthers | Handicap (incl. overtime and penalties) hcp=2.5 -> Home (+2.5) @1.29 (p=0.754)  [research done, unsure]
+   9. Fri 02 Oct 14:30 WAT | Ice Hockey | VHL | Chelmet Chelyabinsk v Neftyanik Almetyevsk | Over/Under total=3.5 -> Over 3.5 @1.28 (p=0.758)  [UNRESEARCHED]
+  10. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Avtomobilist Yekaterinburg v Amur Khabarovsk | Avtomobilist Yekaterinburg Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.804)  [UNRESEARCHED]
+  11. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Salavat Yulaev UFA v Sibir Novosibirsk | Salavat Yulaev UFA Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.805)  [UNRESEARCHED]
+  12. Fri 02 Oct 16:30 WAT | Ice Hockey | Liiga | Kiekko-Espoo v Karpat Oulu | Karpat Oulu Over/Under total=3.5 -> Under 3.5 @1.23 (p=0.791)  [UNRESEARCHED]
+  13. Fri 02 Oct 17:00 WAT | Ice Hockey | KHL | Neftekhimik Nizhnekamsk v HC Barys | Neftekhimik Nizhnekamsk Over/Under total=1.5 -> Over 1.5 @1.24 (p=0.785)  [UNRESEARCHED]
+  14. Fri 02 Oct 17:00 WAT | Basketball | Super Lig | Karsiyaka Basket v Galatasaray SK | Winner (incl. overtime)  -> Away @1.41 (p=0.691)  [UNRESEARCHED]
+  15. Fri 02 Oct 17:30 WAT | Ice Hockey | KHL | Spartak Moscow v Metallurg Magnitogorsk | Metallurg Magnitogorsk Over/Under total=1.5 -> Over 1.5 @1.28 (p=0.760)  [research done, unsure]
+  16. Fri 02 Oct 18:00 WAT | Basketball | Euroleague | Besiktas JK v FC Barcelona | Handicap (incl. overtime) -7.5 hcp=-7.5 -> Away (+7.5) @1.42 (p=0.686)  [UNRESEARCHED]
+  17. Fri 02 Oct 18:30 WAT | Ice Hockey | DEL | Augsburger Panther v Grizzlys Wolfsburg | Augsburger Panther Over/Under total=4.5 -> Under 4.5 @1.20 (p=0.810)  [research done, unsure]
+  18. Fri 02 Oct 18:30 WAT | Ice Hockey | DEL | Kolner Haie v Red Bull Munich | Red Bull Munich Over/Under total=4.5 -> Under 4.5 @1.22 (p=0.798)  [UNRESEARCHED]
+  19. Fri 02 Oct 18:45 WAT | Ice Hockey | National League | HC Davos v HC Ajoie Porrentruy | Winner (incl. overtime and penalties)  -> Home @1.30 (p=0.747)  [UNRESEARCHED]
+  20. Fri 02 Oct 18:45 WAT | Basketball | Euroleague | Fenerbahce Istanbul v Dubai Basketball | Handicap (incl. overtime) -9.5 hcp=-9.5 -> Away (+9.5) @1.40 (p=0.696)  [UNRESEARCHED]
+  21. Fri 02 Oct 18:45 WAT | Ice Hockey | National League | HC Lugano v SC Rapperswil-Jona Lakers | HC Lugano Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.806)  [UNRESEARCHED]
+  22. Fri 02 Oct 19:00 WAT | Basketball | Euroleague | ASVEL Lyon-Villeurbanne v Valencia Basket | Handicap (incl. overtime) 8.5 hcp=8.5 -> Home (+8.5) @1.40 (p=0.697)  [UNRESEARCHED]
+  23. Fri 02 Oct 19:00 WAT | Basketball | LNB Elite | Roanne Chorale v Nanterre 92 | Handicap (incl. overtime) 6.5 hcp=6.5 -> Home (+6.5) @1.48 (p=0.657)  [UNRESEARCHED]
+  24. Sat 03 Oct 01:00 WAT | Ice Hockey | NHL | Winnipeg Jets v Boston Bruins | Boston Bruins Over/Under total=4.5 -> Under 4.5 @1.20 (p=0.811)  [UNRESEARCHED]
+  25. Sat 03 Oct 02:00 WAT | Basketball | WNBA | Golden State Valkyries v Dallas Wings | Winner (incl. overtime)  -> Home @1.34 (p=0.736)  [UNRESEARCHED]
+  26. Sat 03 Oct 17:00 WAT | Basketball | LNB Elite | SIG Strasbourg v Boulazac Basket Dordogne | Winner (incl. overtime)  -> Home @1.51 (p=0.642)  [UNRESEARCHED]
+  27. Sat 03 Oct 18:30 WAT | Basketball | Liga ACB | CB Malaga v CB 1939 Canarias | Winner (incl. overtime)  -> Home @1.33 (p=0.732)  [UNRESEARCHED]
+  28. Sun 04 Oct 02:00 WAT | Basketball | WNBA | Atlanta Dream v New York Liberty | Winner (incl. overtime)  -> Home @1.67 (p=0.589)  [research done, unsure]
+  29. Sun 04 Oct 11:30 WAT | Basketball | Liga ACB | Obradoiro CAB v Real Madrid | Winner (incl. overtime)  -> Away @1.20 (p=0.817)  [research done, unsure]
+  research completed on 5 of 29 legs. First kick-off Thu 01 Oct 15:30 WAT; last sensible time to place: Thu 01 Oct 14:30 WAT.
+
+--- TICKET 2  target N5,000,000 ---
+legs 32 | site payout N5,005,144 | independent 1 in 10,968 | SportyBet-only 1 in 10,301 | correlated 1 in 6,661 (x1.65)
+   1. Thu 01 Oct 15:30 WAT | Ice Hockey | VHL | Izhstal Izhevsk v HC Akm Tula | Izhstal Izhevsk Over/Under total=3.5 -> Under 3.5 @1.21 (p=0.806)  [UNRESEARCHED]
+   2. Thu 01 Oct 17:00 WAT | Ice Hockey | VHL | Dizel Penza v Sokol Krasnoyarsk | Dizel Penza Over/Under total=3.5 -> Under 3.5 @1.24 (p=0.784)  [UNRESEARCHED]
+   3. Thu 01 Oct 17:30 WAT | Ice Hockey | KHL | Severstal Cherepovets v Admiral Vladivostok | Over/Under total=6.5 -> Under 6.5 @1.28 (p=0.759)  [UNRESEARCHED]
+   4. Thu 01 Oct 17:30 WAT | Ice Hockey | Extraliga | Sparta Prague v Ceske Budejovice | Winner (incl. overtime and penalties)  -> Home @1.36 (p=0.717)  [UNRESEARCHED]
+   5. Thu 01 Oct 17:30 WAT | Ice Hockey | KHL | HC Dinamo Minsk v CSKA Moscow | Over/Under total=6.5 -> Under 6.5 @1.31 (p=0.742)  [UNRESEARCHED]
+   6. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | IF Bjorkloven v Vaxjo Lakers | Over/Under total=7.5 -> Under 7.5 @1.22 (p=0.797)  [UNRESEARCHED]
+   7. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Rogle BK v Timraa IK | Rogle BK Over/Under total=1.5 -> Over 1.5 @1.20 (p=0.811)  [UNRESEARCHED]
+   8. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Frolunda HC v Brynas IF | Frolunda HC Over/Under total=1.5 -> Over 1.5 @1.27 (p=0.765)  [UNRESEARCHED]
+   9. Thu 01 Oct 19:30 WAT | Basketball | Euroleague | Virtus Bologna v BC Olympiakos Piraeus | Handicap (incl. overtime) 18.5 hcp=18.5 -> Home (+18.5) @1.25 (p=0.783)  [UNRESEARCHED]
+  10. Thu 01 Oct 19:45 WAT | Basketball | Euroleague | Paris Basketball v BC Zalgiris Kaunas | Handicap (incl. overtime) 12.5 hcp=12.5 -> Home (+12.5) @1.20 (p=0.817)  [UNRESEARCHED]
+  11. Fri 02 Oct 03:00 WAT | Ice Hockey | NHL | San Jose Sharks v Florida Panthers | Handicap (incl. overtime and penalties) hcp=2.5 -> Home (+2.5) @1.29 (p=0.754)  [research done, unsure]
+  12. Fri 02 Oct 04:00 WAT | Tennis | ATP Beijing, China Men Dou | Khachanov K / Rublev A v Cash J / Glasspool L | Winner  -> Away @1.32 (p=0.737) [void risk 0.03]  [UNRESEARCHED]
+  13. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Avtomobilist Yekaterinburg v Amur Khabarovsk | Avtomobilist Yekaterinburg Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.804)  [UNRESEARCHED]
+  14. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Salavat Yulaev UFA v Sibir Novosibirsk | Salavat Yulaev UFA Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.805)  [UNRESEARCHED]
+  15. Fri 02 Oct 16:30 WAT | Ice Hockey | Liiga | Kiekko-Espoo v Karpat Oulu | Karpat Oulu Over/Under total=3.5 -> Under 3.5 @1.23 (p=0.791)  [UNRESEARCHED]
+  16. Fri 02 Oct 17:00 WAT | Ice Hockey | KHL | Neftekhimik Nizhnekamsk v HC Barys | Neftekhimik Nizhnekamsk Over/Under total=1.5 -> Over 1.5 @1.24 (p=0.785)  [UNRESEARCHED]
+  17. Fri 02 Oct 17:00 WAT | Basketball | Super Lig | Karsiyaka Basket v Galatasaray SK | Winner (incl. overtime)  -> Away @1.41 (p=0.691)  [UNRESEARCHED]
+  18. Fri 02 Oct 17:00 WAT | Ice Hockey | Extraliga | HC Kometa Brno v BK Mlada Boleslav | Asian Handicap 0.5 hcp=0.5 -> Home (+0.5) @1.28 (p=0.760)  [research done, unsure]
+  19. Fri 02 Oct 17:30 WAT | Ice Hockey | KHL | Spartak Moscow v Metallurg Magnitogorsk | Metallurg Magnitogorsk Over/Under total=1.5 -> Over 1.5 @1.28 (p=0.760)  [research done, unsure]
+  20. Fri 02 Oct 18:00 WAT | Basketball | Euroleague | Besiktas JK v FC Barcelona | Handicap (incl. overtime) -7.5 hcp=-7.5 -> Away (+7.5) @1.42 (p=0.686)  [UNRESEARCHED]
+  21. Fri 02 Oct 18:30 WAT | Ice Hockey | DEL | Kolner Haie v Red Bull Munich | Red Bull Munich Over/Under total=4.5 -> Under 4.5 @1.22 (p=0.798)  [UNRESEARCHED]
+  22. Fri 02 Oct 18:45 WAT | Basketball | Euroleague | Fenerbahce Istanbul v Dubai Basketball | Handicap (incl. overtime) -9.5 hcp=-9.5 -> Away (+9.5) @1.40 (p=0.696)  [UNRESEARCHED]
+  23. Fri 02 Oct 18:45 WAT | Ice Hockey | National League | HC Lugano v SC Rapperswil-Jona Lakers | HC Lugano Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.806)  [UNRESEARCHED]
+  24. Fri 02 Oct 19:00 WAT | Basketball | Euroleague | ASVEL Lyon-Villeurbanne v Valencia Basket | Handicap (incl. overtime) 8.5 hcp=8.5 -> Home (+8.5) @1.40 (p=0.697)  [UNRESEARCHED]
+  25. Fri 02 Oct 19:00 WAT | Basketball | LNB Elite | Roanne Chorale v Nanterre 92 | Handicap (incl. overtime) 6.5 hcp=6.5 -> Home (+6.5) @1.48 (p=0.657)  [UNRESEARCHED]
+  26. Fri 02 Oct 19:30 WAT | Basketball | Euroleague | Baskonia Vitoria-Gasteiz v Olimpia Milano | Handicap (incl. overtime) 6.5 hcp=6.5 -> Home (+6.5) @1.43 (p=0.681)  [UNRESEARCHED]
+  27. Sat 03 Oct 01:00 WAT | Ice Hockey | NHL | Winnipeg Jets v Boston Bruins | Boston Bruins Over/Under total=4.5 -> Under 4.5 @1.20 (p=0.811)  [UNRESEARCHED]
+  28. Sat 03 Oct 02:00 WAT | Basketball | WNBA | Golden State Valkyries v Dallas Wings | Winner (incl. overtime)  -> Home @1.34 (p=0.736)  [UNRESEARCHED]
+  29. Sat 03 Oct 18:30 WAT | Basketball | Liga ACB | CB Malaga v CB 1939 Canarias | Winner (incl. overtime)  -> Home @1.33 (p=0.732)  [UNRESEARCHED]
+  30. Sun 04 Oct 02:00 WAT | Basketball | WNBA | Atlanta Dream v New York Liberty | Winner (incl. overtime)  -> Home @1.67 (p=0.589)  [research done, unsure]
+  31. Sun 04 Oct 11:30 WAT | Basketball | Liga ACB | Obradoiro CAB v Real Madrid | Winner (incl. overtime)  -> Away @1.20 (p=0.817)  [research done, unsure]
+  32. Sun 04 Oct 15:30 WAT | Basketball | LNB Elite | BCM Gravelines Dunkerque v ASVEL Lyon-Villeurbanne | Winner (incl. overtime)  -> Away @1.45 (p=0.672)  [UNRESEARCHED]
+  research completed on 5 of 32 legs. First kick-off Thu 01 Oct 15:30 WAT; last sensible time to place: Thu 01 Oct 14:30 WAT.
+
+--- TICKET 3  target N10,000,000 ---
+legs 35 | site payout N10,046,771 | independent 1 in 22,705 | SportyBet-only 1 in 20,643 | correlated 1 in 12,797 (x1.77)
+   1. Thu 01 Oct 15:30 WAT | Ice Hockey | VHL | Izhstal Izhevsk v HC Akm Tula | Izhstal Izhevsk Over/Under total=3.5 -> Under 3.5 @1.21 (p=0.806)  [UNRESEARCHED]
+   2. Thu 01 Oct 17:00 WAT | Basketball | Euroleague | Hapoel Tel-Aviv v Real Madrid | Handicap (incl. overtime) -8.5 hcp=-8.5 -> Away (+8.5) @1.22 (p=0.804)  [UNRESEARCHED]
+   3. Thu 01 Oct 17:30 WAT | Ice Hockey | Extraliga | Sparta Prague v Ceske Budejovice | Winner (incl. overtime and penalties)  -> Home @1.36 (p=0.717)  [UNRESEARCHED]
+   4. Thu 01 Oct 17:30 WAT | Ice Hockey | KHL | HC Dinamo Minsk v CSKA Moscow | Over/Under total=6.5 -> Under 6.5 @1.31 (p=0.742)  [UNRESEARCHED]
+   5. Thu 01 Oct 17:30 WAT | Ice Hockey | KHL | Severstal Cherepovets v Admiral Vladivostok | Over/Under total=6.5 -> Under 6.5 @1.28 (p=0.759)  [UNRESEARCHED]
+   6. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Rogle BK v Timraa IK | Rogle BK Over/Under total=1.5 -> Over 1.5 @1.20 (p=0.811)  [UNRESEARCHED]
+   7. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Frolunda HC v Brynas IF | Frolunda HC Over/Under total=1.5 -> Over 1.5 @1.27 (p=0.765)  [UNRESEARCHED]
+   8. Thu 01 Oct 19:45 WAT | Basketball | Euroleague | Paris Basketball v BC Zalgiris Kaunas | Handicap (incl. overtime) 12.5 hcp=12.5 -> Home (+12.5) @1.20 (p=0.817)  [UNRESEARCHED]
+   9. Fri 02 Oct 02:00 WAT | Basketball | WNBA | Las Vegas Aces v Indiana Fever | Winner (incl. overtime)  -> Home @1.58 (p=0.623)  [research done, unsure]
+  10. Fri 02 Oct 02:00 WAT | Ice Hockey | NHL | Calgary Flames v Seattle Kraken | Over/Under total=7.5 -> Under 7.5 @1.26 (p=0.771)  [UNRESEARCHED]
+  11. Fri 02 Oct 03:00 WAT | Ice Hockey | NHL | San Jose Sharks v Florida Panthers | Handicap (incl. overtime and penalties) hcp=2.5 -> Home (+2.5) @1.29 (p=0.754)  [research done, unsure]
+  12. Fri 02 Oct 04:00 WAT | Tennis | ATP Beijing, China Men Dou | Khachanov K / Rublev A v Cash J / Glasspool L | Winner  -> Away @1.32 (p=0.737) [void risk 0.03]  [UNRESEARCHED]
+  13. Fri 02 Oct 14:30 WAT | Ice Hockey | VHL | Chelmet Chelyabinsk v Neftyanik Almetyevsk | Over/Under total=3.5 -> Over 3.5 @1.28 (p=0.758)  [UNRESEARCHED]
+  14. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Avtomobilist Yekaterinburg v Amur Khabarovsk | Avtomobilist Yekaterinburg Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.804)  [UNRESEARCHED]
+  15. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Salavat Yulaev UFA v Sibir Novosibirsk | Salavat Yulaev UFA Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.805)  [UNRESEARCHED]
+  16. Fri 02 Oct 16:30 WAT | Ice Hockey | Liiga | KalPa Hockey v SaiPa Lappeenranta | Asian Handicap -1.5 hcp=-1.5 -> Away (+1.5) @1.34 (p=0.725)  [UNRESEARCHED]
+  17. Fri 02 Oct 16:30 WAT | Ice Hockey | Liiga | Kiekko-Espoo v Karpat Oulu | Karpat Oulu Over/Under total=3.5 -> Under 3.5 @1.23 (p=0.791)  [UNRESEARCHED]
+  18. Fri 02 Oct 17:00 WAT | Ice Hockey | KHL | Neftekhimik Nizhnekamsk v HC Barys | Neftekhimik Nizhnekamsk Over/Under total=1.5 -> Over 1.5 @1.24 (p=0.785)  [UNRESEARCHED]
+  19. Fri 02 Oct 17:00 WAT | Basketball | Super Lig | Karsiyaka Basket v Galatasaray SK | Winner (incl. overtime)  -> Away @1.41 (p=0.691)  [UNRESEARCHED]
+  20. Fri 02 Oct 17:30 WAT | Ice Hockey | KHL | Spartak Moscow v Metallurg Magnitogorsk | Metallurg Magnitogorsk Over/Under total=1.5 -> Over 1.5 @1.28 (p=0.760)  [research done, unsure]
+  21. Fri 02 Oct 18:00 WAT | Basketball | Euroleague | Besiktas JK v FC Barcelona | Handicap (incl. overtime) -7.5 hcp=-7.5 -> Away (+7.5) @1.42 (p=0.686)  [UNRESEARCHED]
+  22. Fri 02 Oct 18:30 WAT | Ice Hockey | DEL | Kolner Haie v Red Bull Munich | Red Bull Munich Over/Under total=4.5 -> Under 4.5 @1.22 (p=0.798)  [UNRESEARCHED]
+  23. Fri 02 Oct 18:30 WAT | Ice Hockey | DEL | Augsburger Panther v Grizzlys Wolfsburg | Augsburger Panther Over/Under total=4.5 -> Under 4.5 @1.20 (p=0.810)  [research done, unsure]
+  24. Fri 02 Oct 18:45 WAT | Ice Hockey | National League | HC Lausanne v EHC Biel | HC Lausanne Over/Under total=4.5 -> Under 4.5 @1.22 (p=0.798)  [UNRESEARCHED]
+  25. Fri 02 Oct 18:45 WAT | Basketball | Euroleague | Fenerbahce Istanbul v Dubai Basketball | Handicap (incl. overtime) -9.5 hcp=-9.5 -> Away (+9.5) @1.40 (p=0.696)  [UNRESEARCHED]
+  26. Fri 02 Oct 18:45 WAT | Ice Hockey | National League | HC Lugano v SC Rapperswil-Jona Lakers | HC Lugano Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.806)  [UNRESEARCHED]
+  27. Fri 02 Oct 19:00 WAT | Basketball | Euroleague | ASVEL Lyon-Villeurbanne v Valencia Basket | Handicap (incl. overtime) 8.5 hcp=8.5 -> Home (+8.5) @1.40 (p=0.697)  [UNRESEARCHED]
+  28. Fri 02 Oct 19:00 WAT | Basketball | LNB Elite | Roanne Chorale v Nanterre 92 | Handicap (incl. overtime) 6.5 hcp=6.5 -> Home (+6.5) @1.48 (p=0.657)  [UNRESEARCHED]
+  29. Fri 02 Oct 19:30 WAT | Basketball | Euroleague | Baskonia Vitoria-Gasteiz v Olimpia Milano | Handicap (incl. overtime) 6.5 hcp=6.5 -> Home (+6.5) @1.43 (p=0.681)  [UNRESEARCHED]
+  30. Fri 02 Oct 19:30 WAT | Basketball | Liga ABA | KK Krka Novo Mesto v Buducnost Podgorica | Draw No Bet  -> Away @1.22 (p=0.797) [void risk 0.05]  [UNRESEARCHED]
+  31. Sat 03 Oct 01:00 WAT | Ice Hockey | NHL | Winnipeg Jets v Boston Bruins | Boston Bruins Over/Under total=4.5 -> Under 4.5 @1.20 (p=0.811)  [UNRESEARCHED]
+  32. Sat 03 Oct 02:00 WAT | Basketball | WNBA | Golden State Valkyries v Dallas Wings | Winner (incl. overtime)  -> Home @1.34 (p=0.736)  [UNRESEARCHED]
+  33. Sat 03 Oct 18:30 WAT | Basketball | Liga ACB | CB Malaga v CB 1939 Canarias | Winner (incl. overtime)  -> Home @1.33 (p=0.732)  [UNRESEARCHED]
+  34. Sun 04 Oct 11:30 WAT | Basketball | Liga ACB | Obradoiro CAB v Real Madrid | Winner (incl. overtime)  -> Away @1.20 (p=0.817)  [research done, unsure]
+  35. Sun 04 Oct 15:30 WAT | Basketball | LNB Elite | BCM Gravelines Dunkerque v ASVEL Lyon-Villeurbanne | Winner (incl. overtime)  -> Away @1.45 (p=0.672)  [UNRESEARCHED]
+  research completed on 5 of 35 legs. First kick-off Thu 01 Oct 15:30 WAT; last sensible time to place: Thu 01 Oct 14:30 WAT.
+
+--- TICKET 4  target N50,000,000 ---
+legs 40 | site payout N50,452,777 | independent 1 in 111,125 | SportyBet-only 1 in 103,933 | correlated 1 in 49,315 (x2.25)
+   1. Thu 01 Oct 15:30 WAT | Ice Hockey | VHL | Izhstal Izhevsk v HC Akm Tula | Izhstal Izhevsk Over/Under total=3.5 -> Under 3.5 @1.21 (p=0.806)  [UNRESEARCHED]
+   2. Thu 01 Oct 17:30 WAT | Ice Hockey | Extraliga | Sparta Prague v Ceske Budejovice | Winner (incl. overtime and penalties)  -> Home @1.36 (p=0.717)  [UNRESEARCHED]
+   3. Thu 01 Oct 17:30 WAT | Ice Hockey | KHL | HC Dinamo Minsk v CSKA Moscow | Over/Under total=6.5 -> Under 6.5 @1.31 (p=0.742)  [UNRESEARCHED]
+   4. Thu 01 Oct 17:30 WAT | Ice Hockey | KHL | Severstal Cherepovets v Admiral Vladivostok | Over/Under total=6.5 -> Under 6.5 @1.28 (p=0.759)  [UNRESEARCHED]
+   5. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Djurgardens IF v Farjestads BK | Over/Under total=3.5 -> Over 3.5 @1.23 (p=0.789)  [UNRESEARCHED]
+   6. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Rogle BK v Timraa IK | Rogle BK Over/Under total=1.5 -> Over 1.5 @1.20 (p=0.811)  [UNRESEARCHED]
+   7. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Frolunda HC v Brynas IF | Frolunda HC Over/Under total=1.5 -> Over 1.5 @1.27 (p=0.765)  [UNRESEARCHED]
+   8. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | IF Bjorkloven v Vaxjo Lakers | Over/Under total=7.5 -> Under 7.5 @1.22 (p=0.797)  [UNRESEARCHED]
+   9. Thu 01 Oct 19:45 WAT | Basketball | Euroleague | Paris Basketball v BC Zalgiris Kaunas | Handicap (incl. overtime) 12.5 hcp=12.5 -> Home (+12.5) @1.20 (p=0.817)  [UNRESEARCHED]
+  10. Fri 02 Oct 02:00 WAT | Ice Hockey | NHL | Calgary Flames v Seattle Kraken | Over/Under total=7.5 -> Under 7.5 @1.26 (p=0.771)  [UNRESEARCHED]
+  11. Fri 02 Oct 02:30 WAT | Ice Hockey | NHL | Utah Mammoth v Chicago Blackhawks | Over/Under total=7.5 -> Under 7.5 @1.28 (p=0.758)  [UNRESEARCHED]
+  12. Fri 02 Oct 03:00 WAT | Ice Hockey | NHL | San Jose Sharks v Florida Panthers | Handicap (incl. overtime and penalties) hcp=2.5 -> Home (+2.5) @1.29 (p=0.754)  [research done, unsure]
+  13. Fri 02 Oct 14:30 WAT | Ice Hockey | VHL | Chelmet Chelyabinsk v Neftyanik Almetyevsk | Over/Under total=3.5 -> Over 3.5 @1.28 (p=0.758)  [UNRESEARCHED]
+  14. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Avtomobilist Yekaterinburg v Amur Khabarovsk | Avtomobilist Yekaterinburg Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.804)  [UNRESEARCHED]
+  15. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Salavat Yulaev UFA v Sibir Novosibirsk | Salavat Yulaev UFA Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.805)  [UNRESEARCHED]
+  16. Fri 02 Oct 16:30 WAT | Ice Hockey | Liiga | KalPa Hockey v SaiPa Lappeenranta | Asian Handicap -1.5 hcp=-1.5 -> Away (+1.5) @1.34 (p=0.725)  [UNRESEARCHED]
+  17. Fri 02 Oct 16:30 WAT | Ice Hockey | Liiga | Kiekko-Espoo v Karpat Oulu | Karpat Oulu Over/Under total=3.5 -> Under 3.5 @1.23 (p=0.791)  [UNRESEARCHED]
+  18. Fri 02 Oct 17:00 WAT | Ice Hockey | KHL | Neftekhimik Nizhnekamsk v HC Barys | Neftekhimik Nizhnekamsk Over/Under total=1.5 -> Over 1.5 @1.24 (p=0.785)  [UNRESEARCHED]
+  19. Fri 02 Oct 17:00 WAT | Ice Hockey | KHL | Ak Bars Kazan v Traktor Chelyabinsk | Over/Under total=3.5 -> Over 3.5 @1.31 (p=0.742)  [UNRESEARCHED]
+  20. Fri 02 Oct 17:30 WAT | Ice Hockey | KHL | Spartak Moscow v Metallurg Magnitogorsk | Metallurg Magnitogorsk Over/Under total=1.5 -> Over 1.5 @1.28 (p=0.760)  [research done, unsure]
+  21. Fri 02 Oct 17:30 WAT | Ice Hockey | Liiga | Assat Pori v Lukko Rauma | Assat Pori Over/Under total=1.5 -> Over 1.5 @1.33 (p=0.730)  [UNRESEARCHED]
+  22. Fri 02 Oct 18:00 WAT | Basketball | Euroleague | Besiktas JK v FC Barcelona | Handicap (incl. overtime) -7.5 hcp=-7.5 -> Away (+7.5) @1.42 (p=0.686)  [UNRESEARCHED]
+  23. Fri 02 Oct 18:30 WAT | Ice Hockey | DEL | Kolner Haie v Red Bull Munich | Red Bull Munich Over/Under total=4.5 -> Under 4.5 @1.22 (p=0.798)  [UNRESEARCHED]
+  24. Fri 02 Oct 18:30 WAT | Ice Hockey | DEL | Augsburger Panther v Grizzlys Wolfsburg | Augsburger Panther Over/Under total=4.5 -> Under 4.5 @1.20 (p=0.810)  [research done, unsure]
+  25. Fri 02 Oct 18:45 WAT | Basketball | Euroleague | Fenerbahce Istanbul v Dubai Basketball | Handicap (incl. overtime) -9.5 hcp=-9.5 -> Away (+9.5) @1.40 (p=0.696)  [UNRESEARCHED]
+  26. Fri 02 Oct 18:45 WAT | Ice Hockey | National League | HC Lugano v SC Rapperswil-Jona Lakers | HC Lugano Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.806)  [UNRESEARCHED]
+  27. Fri 02 Oct 19:00 WAT | Basketball | BBL | Wurzburg Baskets v Baskets Bonn | Handicap (incl. overtime) -4.5 hcp=-4.5 -> Away (+4.5) @1.61 (p=0.603)  [UNRESEARCHED]
+  28. Fri 02 Oct 19:00 WAT | Basketball | Euroleague | ASVEL Lyon-Villeurbanne v Valencia Basket | Handicap (incl. overtime) 8.5 hcp=8.5 -> Home (+8.5) @1.40 (p=0.697)  [UNRESEARCHED]
+  29. Fri 02 Oct 19:00 WAT | Basketball | LNB Elite | Roanne Chorale v Nanterre 92 | Handicap (incl. overtime) 6.5 hcp=6.5 -> Home (+6.5) @1.48 (p=0.657)  [UNRESEARCHED]
+  30. Fri 02 Oct 19:00 WAT | Basketball | Euroleague | Bayern Munich v KK Partizan Belgrade | Handicap (incl. overtime) -6.5 hcp=-6.5 -> Away (+6.5) @1.48 (p=0.656)  [UNRESEARCHED]
+  31. Fri 02 Oct 19:30 WAT | Basketball | Euroleague | Baskonia Vitoria-Gasteiz v Olimpia Milano | Handicap (incl. overtime) 6.5 hcp=6.5 -> Home (+6.5) @1.43 (p=0.681)  [UNRESEARCHED]
+  32. Fri 02 Oct 19:30 WAT | Basketball | Liga ABA | KK Krka Novo Mesto v Buducnost Podgorica | Draw No Bet  -> Away @1.22 (p=0.797) [void risk 0.05]  [UNRESEARCHED]
+  33. Fri 02 Oct 23:30 WAT | Ice Hockey | NHL | Detroit Red Wings v New York Rangers | New York Rangers Over/Under total=1.5 -> Over 1.5 @1.26 (p=0.771)  [UNRESEARCHED]
+  34. Sat 03 Oct 01:00 WAT | Ice Hockey | NHL | Winnipeg Jets v Boston Bruins | Boston Bruins Over/Under total=4.5 -> Under 4.5 @1.20 (p=0.811)  [UNRESEARCHED]
+  35. Sat 03 Oct 02:00 WAT | Basketball | WNBA | Golden State Valkyries v Dallas Wings | Winner (incl. overtime)  -> Home @1.34 (p=0.736)  [UNRESEARCHED]
+  36. Sat 03 Oct 17:30 WAT | Basketball | LNB Elite | Limoges CSP v Saint Quentin | Winner (incl. overtime)  -> Home @1.26 (p=0.773)  [research done, unsure]
+  37. Sat 03 Oct 18:30 WAT | Basketball | Liga ACB | CB Malaga v CB 1939 Canarias | Winner (incl. overtime)  -> Home @1.33 (p=0.732)  [UNRESEARCHED]
+  38. Sun 04 Oct 11:30 WAT | Basketball | Liga ACB | Obradoiro CAB v Real Madrid | Winner (incl. overtime)  -> Away @1.20 (p=0.817)  [research done, unsure]
+  39. Sun 04 Oct 16:00 WAT | Basketball | Liga ACB | Basket Zaragoza 2002 v Valencia Basket | Winner (incl. overtime)  -> Away @1.51 (p=0.643)  [UNRESEARCHED]
+  40. Mon 05 Oct 17:00 WAT | Basketball | Super Lig | Besiktas JK v Trabzonspor Basketbol | Winner (incl. overtime)  -> Home @1.40 (p=0.694)  [UNRESEARCHED]
+  research completed on 5 of 40 legs. First kick-off Thu 01 Oct 15:30 WAT; last sensible time to place: Thu 01 Oct 14:30 WAT.
+
+--- TICKET 5  target N200,000,000 ---
+legs 44 | site payout N200,000,000 | independent 1 in 497,168 | SportyBet-only 1 in 415,823 | correlated 1 in 185,340 (x2.68)
+   1. Thu 01 Oct 15:30 WAT | Ice Hockey | VHL | Izhstal Izhevsk v HC Akm Tula | Izhstal Izhevsk Over/Under total=3.5 -> Under 3.5 @1.21 (p=0.806)  [UNRESEARCHED]
+   2. Thu 01 Oct 17:00 WAT | Ice Hockey | VHL | Dizel Penza v Sokol Krasnoyarsk | Dizel Penza Over/Under total=3.5 -> Under 3.5 @1.24 (p=0.784)  [UNRESEARCHED]
+   3. Thu 01 Oct 17:30 WAT | Ice Hockey | Extraliga | Sparta Prague v Ceske Budejovice | Winner (incl. overtime and penalties)  -> Home @1.36 (p=0.717)  [UNRESEARCHED]
+   4. Thu 01 Oct 17:30 WAT | Ice Hockey | KHL | HC Dinamo Minsk v CSKA Moscow | Over/Under total=6.5 -> Under 6.5 @1.31 (p=0.742)  [UNRESEARCHED]
+   5. Thu 01 Oct 17:30 WAT | Ice Hockey | KHL | Severstal Cherepovets v Admiral Vladivostok | Over/Under total=6.5 -> Under 6.5 @1.28 (p=0.759)  [UNRESEARCHED]
+   6. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | HV71 v HC Orebro | Over/Under total=7.5 -> Under 7.5 @1.22 (p=0.795)  [research done, unsure]
+   7. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | Frolunda HC v Brynas IF | Frolunda HC Over/Under total=1.5 -> Over 1.5 @1.27 (p=0.765)  [UNRESEARCHED]
+   8. Thu 01 Oct 18:00 WAT | Ice Hockey | SHL | IF Bjorkloven v Vaxjo Lakers | Over/Under total=7.5 -> Under 7.5 @1.22 (p=0.797)  [UNRESEARCHED]
+   9. Thu 01 Oct 19:30 WAT | Basketball | Euroleague | Virtus Bologna v BC Olympiakos Piraeus | Handicap (incl. overtime) 18.5 hcp=18.5 -> Home (+18.5) @1.25 (p=0.783)  [UNRESEARCHED]
+  10. Thu 01 Oct 19:45 WAT | Basketball | Euroleague | Paris Basketball v BC Zalgiris Kaunas | Handicap (incl. overtime) 12.5 hcp=12.5 -> Home (+12.5) @1.20 (p=0.817)  [UNRESEARCHED]
+  11. Fri 02 Oct 02:00 WAT | Ice Hockey | NHL | Calgary Flames v Seattle Kraken | Over/Under total=7.5 -> Under 7.5 @1.26 (p=0.771)  [UNRESEARCHED]
+  12. Fri 02 Oct 03:00 WAT | Ice Hockey | NHL | San Jose Sharks v Florida Panthers | Handicap (incl. overtime and penalties) hcp=2.5 -> Home (+2.5) @1.29 (p=0.754)  [research done, unsure]
+  13. Fri 02 Oct 03:00 WAT | Tennis | ATP Beijing, China Men Dou | Andreozzi G / Guinard M v Arends S / Pel D | Winner  -> Home @1.39 (p=0.700) [void risk 0.03]  [research done, unsure]
+  14. Fri 02 Oct 04:00 WAT | Basketball | LNBP | Soles de Mexicali v Diablos Rojos Del Mexico | Draw No Bet  -> Home @1.21 (p=0.805) [void risk 0.05]  [UNRESEARCHED]
+  15. Fri 02 Oct 14:30 WAT | Ice Hockey | VHL | Chelmet Chelyabinsk v Neftyanik Almetyevsk | Over/Under total=3.5 -> Over 3.5 @1.28 (p=0.758)  [UNRESEARCHED]
+  16. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Avtomobilist Yekaterinburg v Amur Khabarovsk | Avtomobilist Yekaterinburg Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.804)  [UNRESEARCHED]
+  17. Fri 02 Oct 15:00 WAT | Ice Hockey | KHL | Salavat Yulaev UFA v Sibir Novosibirsk | Salavat Yulaev UFA Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.805)  [UNRESEARCHED]
+  18. Fri 02 Oct 16:30 WAT | Ice Hockey | Liiga | KalPa Hockey v SaiPa Lappeenranta | Asian Handicap -1.5 hcp=-1.5 -> Away (+1.5) @1.34 (p=0.725)  [UNRESEARCHED]
+  19. Fri 02 Oct 16:30 WAT | Ice Hockey | Liiga | Kiekko-Espoo v Karpat Oulu | Karpat Oulu Over/Under total=3.5 -> Under 3.5 @1.23 (p=0.791)  [UNRESEARCHED]
+  20. Fri 02 Oct 17:00 WAT | Ice Hockey | KHL | Ak Bars Kazan v Traktor Chelyabinsk | Over/Under total=3.5 -> Over 3.5 @1.31 (p=0.742)  [UNRESEARCHED]
+  21. Fri 02 Oct 17:00 WAT | Ice Hockey | KHL | Neftekhimik Nizhnekamsk v HC Barys | Neftekhimik Nizhnekamsk Over/Under total=1.5 -> Over 1.5 @1.24 (p=0.785)  [UNRESEARCHED]
+  22. Fri 02 Oct 17:30 WAT | Ice Hockey | KHL | Spartak Moscow v Metallurg Magnitogorsk | Metallurg Magnitogorsk Over/Under total=1.5 -> Over 1.5 @1.28 (p=0.760)  [research done, unsure]
+  23. Fri 02 Oct 17:30 WAT | Ice Hockey | Liiga | Assat Pori v Lukko Rauma | Assat Pori Over/Under total=1.5 -> Over 1.5 @1.33 (p=0.730)  [UNRESEARCHED]
+  24. Fri 02 Oct 18:00 WAT | Basketball | Euroleague | Besiktas JK v FC Barcelona | Handicap (incl. overtime) -7.5 hcp=-7.5 -> Away (+7.5) @1.42 (p=0.686)  [UNRESEARCHED]
+  25. Fri 02 Oct 18:30 WAT | Ice Hockey | DEL | Kolner Haie v Red Bull Munich | Red Bull Munich Over/Under total=4.5 -> Under 4.5 @1.22 (p=0.798)  [UNRESEARCHED]
+  26. Fri 02 Oct 18:30 WAT | Ice Hockey | DEL | Augsburger Panther v Grizzlys Wolfsburg | Augsburger Panther Over/Under total=4.5 -> Under 4.5 @1.20 (p=0.810)  [research done, unsure]
+  27. Fri 02 Oct 18:45 WAT | Basketball | Euroleague | Fenerbahce Istanbul v Dubai Basketball | Handicap (incl. overtime) -9.5 hcp=-9.5 -> Away (+9.5) @1.40 (p=0.696)  [UNRESEARCHED]
+  28. Fri 02 Oct 18:45 WAT | Ice Hockey | National League | HC Lugano v SC Rapperswil-Jona Lakers | HC Lugano Over/Under total=4.5 -> Under 4.5 @1.21 (p=0.806)  [UNRESEARCHED]
+  29. Fri 02 Oct 19:00 WAT | Basketball | Euroleague | ASVEL Lyon-Villeurbanne v Valencia Basket | Handicap (incl. overtime) 8.5 hcp=8.5 -> Home (+8.5) @1.40 (p=0.697)  [UNRESEARCHED]
+  30. Fri 02 Oct 19:00 WAT | Basketball | LNB Elite | Roanne Chorale v Nanterre 92 | Handicap (incl. overtime) 6.5 hcp=6.5 -> Home (+6.5) @1.48 (p=0.657)  [UNRESEARCHED]
+  31. Fri 02 Oct 19:00 WAT | Basketball | Euroleague | Bayern Munich v KK Partizan Belgrade | Handicap (incl. overtime) -6.5 hcp=-6.5 -> Away (+6.5) @1.48 (p=0.656)  [UNRESEARCHED]
+  32. Fri 02 Oct 19:15 WAT | Basketball | Euroleague | Panathinaikos BC v Maccabi Tel-Aviv | Handicap (incl. overtime) -6.5 hcp=-6.5 -> Home (-6.5) @1.45 (p=0.671)  [UNRESEARCHED]
+  33. Fri 02 Oct 19:30 WAT | Basketball | Euroleague | Baskonia Vitoria-Gasteiz v Olimpia Milano | Handicap (incl. overtime) 6.5 hcp=6.5 -> Home (+6.5) @1.43 (p=0.681)  [UNRESEARCHED]
+  34. Fri 02 Oct 19:30 WAT | Basketball | Liga ABA | KK Krka Novo Mesto v Buducnost Podgorica | Draw No Bet  -> Away @1.22 (p=0.797) [void risk 0.05]  [UNRESEARCHED]
+  35. Fri 02 Oct 23:30 WAT | Ice Hockey | NHL | Detroit Red Wings v New York Rangers | New York Rangers Over/Under total=1.5 -> Over 1.5 @1.26 (p=0.771)  [UNRESEARCHED]
+  36. Sat 03 Oct 01:00 WAT | Ice Hockey | NHL | Winnipeg Jets v Boston Bruins | Boston Bruins Over/Under total=4.5 -> Under 4.5 @1.20 (p=0.811)  [UNRESEARCHED]
+  37. Sat 03 Oct 02:00 WAT | Basketball | WNBA | Golden State Valkyries v Dallas Wings | Winner (incl. overtime)  -> Home @1.34 (p=0.736)  [UNRESEARCHED]
+  38. Sat 03 Oct 17:30 WAT | Basketball | LNB Elite | Limoges CSP v Saint Quentin | Winner (incl. overtime)  -> Home @1.26 (p=0.773)  [research done, unsure]
+  39. Sat 03 Oct 18:30 WAT | Basketball | Liga ACB | CB Malaga v CB 1939 Canarias | Winner (incl. overtime)  -> Home @1.33 (p=0.732)  [UNRESEARCHED]
+  40. Sun 04 Oct 02:00 WAT | Basketball | WNBA | Atlanta Dream v New York Liberty | Winner (incl. overtime)  -> Home @1.67 (p=0.589)  [research done, unsure]
+  41. Sun 04 Oct 11:30 WAT | Basketball | Liga ACB | Obradoiro CAB v Real Madrid | Winner (incl. overtime)  -> Away @1.20 (p=0.817)  [research done, unsure]
+  42. Sun 04 Oct 15:30 WAT | Basketball | LNB Elite | BCM Gravelines Dunkerque v ASVEL Lyon-Villeurbanne | Winner (incl. overtime)  -> Away @1.45 (p=0.672)  [UNRESEARCHED]
+  43. Sun 04 Oct 16:00 WAT | Basketball | Liga ACB | Basket Zaragoza 2002 v Valencia Basket | Winner (incl. overtime)  -> Away @1.51 (p=0.643)  [UNRESEARCHED]
+  44. Mon 05 Oct 17:00 WAT | Basketball | Super Lig | Besiktas JK v Trabzonspor Basketbol | Winner (incl. overtime)  -> Home @1.40 (p=0.694)  [UNRESEARCHED]
+  research completed on 8 of 44 legs. First kick-off Thu 01 Oct 15:30 WAT; last sensible time to place: Thu 01 Oct 14:30 WAT.
+
+=== 4. HOW MUCH THE CORRELATION GUESS MATTERS (P(hit target), 1 in N) ===
+ticket     independent     rw=0.01     rw=0.03     rw=0.05
+T1          1 in 4,231    1 in 2,965    1 in 2,858    1 in 2,756
+T2         1 in 10,968    1 in 7,037    1 in 6,661    1 in 6,311
+T3         1 in 22,705   1 in 13,555   1 in 12,797   1 in 12,092
+T4        1 in 111,125   1 in 55,125   1 in 49,315   1 in 44,274
+T5        1 in 497,168  1 in 209,134  1 in 185,340  1 in 165,071
+If real within-league correlation is near zero, the 'independent' column is the honest one.
+
+=== 5. SET A (PLACED) RE-CHECKED AT TODAY'S PRICES ===
+The booking codes carry the selections, not the odds you locked in, so this is indicative only. For your real position I need the
+locked payouts from Bet History. Void-corrected (whole-number lines split into win/refund using the line ladders):
+  L276WP  target N2,000,000: site payout today N2,282,269 | naive 1 in 4,682 | void-correct P(>=target) 1 in 24,728 | pays anything 1 in 3,333
+  LNDRQN  target N5,000,000: site payout today N5,446,621 | naive 1 in 11,188 | void-correct P(>=target) 1 in 92,073 | pays anything 1 in 7,622
+  MTK97W  target N10,000,000: site payout today N10,962,365 | naive 1 in 22,463 | void-correct P(>=target) 1 in 122,599 | pays anything 1 in 15,025
+  LLKBMV  target N50,000,000: site payout today N49,741,471 | naive 1 in 102,836 | void-correct P(>=target) n/a | pays anything 1 in 101,633
+  ME3JZH  target N200,000,000: site payout today N200,000,000 | naive 1 in 420,080 | void-correct P(>=target) 1 in 440,527 | pays anything 1 in 415,168
+
+=== 6. RESEARCH FINDINGS SO FAR (partial, mostly 'unverified') ===
+  AVOID   Columbus Blue Jackets v Buffalo Sabres [Under 7.5]: Fixture confirmed: NHL 2026-27 regular-season opener, Buffalo at Columbus, Thu Oct 1 7:00 PM ET (23:00 UTC / 00:00 WAT) at Nationwide Arena. Both No. 1 goalies (Greaves .908, Luukkonen .909 last season) are expected to start; both defences are depleted (CBJ wi
+  AVOID   HC Vitkovice v Energie Karlovy Vary [Home (+1.5)]: Fixture confirmed: Tipsport extraliga round 7, Vítkovice v BYD Energie Karlovy Vary, Fri 2 Oct 2026 17:30 CEST (15:30 UTC / 16:30 WAT) at Mustang Arena, Ostrava. Vítkovice are 2-3 (two straight wins, 6:2 and 4:3) but have conceded 4.0 goals/game; Karlovy Vary 
+  KILLED  Zimbabwe v West Indies [Away]: West Indies' captain and best player Hayley Matthews is confirmed NOT playing the T20I leg: Cricket West Indies' squad announcement (windiescricket.com, 19 Sep 2026, "West Indies Women Name Squad for Zimbabwe Tour") states "Captain Hayley Matthews will lead th
+  KILLED  Alba Berlin v Bamberg Baskets [Home]: Key players out, confirmed by the club: Alba Berlin's starting centre Norris Agbakoko (fractured medial malleolus, operated 28 Sept, "könnte ein halbes Jahr fehlen" per sports director Himar Ojeda) and starting point guard Martin Hermannsson (adductor/thigh mu
+  AVOID   Vancouver Canucks v Edmonton Oilers [Over 4.5]: Verdict is avoid, mainly on price arithmetic, but I have low confidence because no live research was possible. Search was refused (200/200 budget used) and the NHL, ESPN and Flashscore fetches were blocked. Nothing below comes from a source retrieved this sess
+  (Any Set B leg in that list should be treated as suspect; Set B was built from legs that were mostly never individually researched.)
+
+=== 7. WHAT I COULD NOT CHECK ===
+* Team news, injuries, rotation, form and sharp-market comparison for ~100 of 151 candidate legs (search cap exhausted).
+* Correlation between legs (no historical round data pulled; section 4 is a sensitivity, not a measurement).
+* Tennis retirement risk (assumed 3% of tennis legs void) and basketball draw-no-bet refund risk (taken from the 1X2 draw price).
+* Whether odds move before you book: three of Set B ticket 1's legs already moved in an hour.
